@@ -105,5 +105,5 @@ III) If you distribute a modified version of {project}, you are encouraged to us
 IV)  It is not allowed to remove this license from the distribution of the {project}
      sources, parts of it or from a modified version.  You may use this
      license for previous {project} releases instead of the license that they came
-		 with, at your option.
+     with, at your option.
 		 </pre>
