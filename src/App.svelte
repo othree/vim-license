@@ -14,11 +14,25 @@ const copy = () => {
 
 <style>
 
-main {
+main, footer {
 	margin: 0 auto;
 	width: 90%;
 	max-width: 800px;
-	padding-bottom: 2em;
+}
+
+footer {
+	margin: 2em auto 1em;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
 }
 
 #license-text {
@@ -253,3 +267,7 @@ IV)  It is not allowed to remove this license from the distribution of the {proj
      with, at your option.</pre>
 
 </main>
+
+<footer>
+	<a href="https://github.com/othree/vim-license" target="_blank">GitHub</a>
+</footer>
