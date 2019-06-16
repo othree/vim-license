@@ -1,2 +1,615 @@
-var app=function(){"use strict";function e(){}function t(e){return e()}function n(){return Object.create(null)}function o(e){e.forEach(t)}function i(e){return"function"==typeof e}function r(e,t){return e!=e?t==t:e!==t||e&&"object"==typeof e||"function"==typeof e}function a(e,t){e.appendChild(t)}function c(e,t,n){e.insertBefore(t,n||null)}function s(e){e.parentNode.removeChild(e)}function u(e){return document.createElement(e)}function l(e){return document.createTextNode(e)}function d(){return l(" ")}function h(e,t,n,o){return e.addEventListener(t,n,o),()=>e.removeEventListener(t,n,o)}function f(e,t){t=""+t,e.data!==t&&(e.data=t)}let p;function m(e){p=e}const g=[],y=Promise.resolve();let j=!1;const b=[],v=[],w=[];function $(e){v.push(e)}function x(){const e=new Set;do{for(;g.length;){const e=g.shift();m(e),_(e.$$)}for(;b.length;)b.shift()();for(;v.length;){const t=v.pop();e.has(t)||(t(),e.add(t))}}while(g.length);for(;w.length;)w.pop()();j=!1}function _(e){e.fragment&&(e.update(e.dirty),o(e.before_render),e.fragment.p(e.dirty,e.ctx),e.dirty=null,e.after_render.forEach($))}function I(e,t){e.$$.dirty||(g.push(e),j||(j=!0,y.then(x)),e.$$.dirty=n()),e.$$.dirty[t]=!0}function k(r,a,c,s,u,l){const d=p;m(r);const h=a.props||{},f=r.$$={fragment:null,ctx:null,props:l,update:e,not_equal:u,bound:n(),on_mount:[],on_destroy:[],before_render:[],after_render:[],context:new Map(d?d.$$.context:[]),callbacks:n(),dirty:null};let g=!1;var y;f.ctx=c?c(r,h,(e,t)=>{f.ctx&&u(f.ctx[e],f.ctx[e]=t)&&(f.bound[e]&&f.bound[e](t),g&&I(r,e))}):h,f.update(),g=!0,o(f.before_render),f.fragment=s(f.ctx),a.target&&(a.hydrate?f.fragment.l((y=a.target,Array.from(y.childNodes))):f.fragment.c(),a.intro&&r.$$.fragment.i&&r.$$.fragment.i(),function(e,n,r){const{fragment:a,on_mount:c,on_destroy:s,after_render:u}=e.$$;a.m(n,r),$(()=>{const n=c.map(t).filter(i);s?s.push(...n):o(n),e.$$.on_mount=[]}),u.forEach($)}(r,a.target,a.anchor),x()),m(d)}class T{$destroy(){var t,n;n=!0,(t=this).$$&&(o(t.$$.on_destroy),t.$$.fragment.d(n),t.$$.on_destroy=t.$$.fragment=null,t.$$.ctx={}),this.$destroy=e}$on(e,t){const n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(t),()=>{const e=n.indexOf(t);-1!==e&&n.splice(e,1)}}$set(){}}function E(t){var n,i,r,p,m,g,y,j,b,v,w,$,x,_,I,k,T,E,L,C,N,P,W,M,V,Y,G,F,U,q,B,O,A,R,S,z,D,H,J,K,Q,X,Z,ee,te,ne,oe,ie,re,ae,ce,se,ue,le,de,he,fe,pe,me,ge,ye,je,be,ve,we,$e,xe,_e,Ie,ke,Te,Ee,Le,Ce,Ne,Pe,We;return{c(){(n=u("h1")).textContent="Vim License",i=d(),r=u("fieldset"),(p=u("label")).textContent="Maintainer",m=d(),g=u("input"),y=d(),j=u("fieldset"),(b=u("label")).textContent="Project Name",v=d(),w=u("input"),$=d(),x=u("fieldset"),(_=u("label")).textContent="Project URL",I=d(),k=u("input"),T=d(),E=u("fieldset"),(L=u("label")).textContent="Maintainer Email",C=d(),N=u("input"),P=d(),W=u("pre"),M=l("VIM LICENSE\n\nI)  There are no restrictions on distributing unmodified copies of "),V=l(t.project),Y=l(" except\n    that they must include this license text.  You can also distribute\n    unmodified parts of "),G=l(t.project),F=l(", likewise unrestricted except that they must\n    include this license text.  You are also allowed to include executables\n    that you made from the unmodified "),U=l(t.project),q=l(" sources, plus your own usage\n    examples and Vim scripts.\n\nII) It is allowed to distribute a modified (or extended) version of "),B=l(t.project),O=l(",\n    including executables and/or source code, when the following four\n    conditions are met:\n    1) This license text must be included unmodified.\n    2) The modified "),A=l(t.project),R=l(" must be distributed in one of the following five ways:\n       a) If you make changes to "),S=l(t.project),z=l(" yourself, you must clearly describe in\n\t  the distribution how to contact you.  When the maintainer asks you\n\t  (in any way) for a copy of the modified "),D=l(t.project),H=l(" you distributed, you\n\t  must make your changes, including source code, available to the\n\t  maintainer without fee.  The maintainer reserves the right to\n\t  include your changes in the official version of "),J=l(t.project),K=l(".  What the\n\t  maintainer will do with your changes and under what license they\n\t  will be distributed is negotiable.  If there has been no negotiation\n\t  then this license, or a later version, also applies to your changes.\n\t  The current maintainer is "),Q=l(t.fullname),X=l(".  If this\n\t  changes it will be announced in appropriate places (most likely\n\t  "),Z=l(t.projecturl),ee=l(").  When it is completely\n\t  impossible to contact the maintainer, the obligation to send him\n\t  your changes ceases.  Once the maintainer has confirmed that he has\n\t  received your changes they will not have to be sent again.\n       b) If you have received a modified "),te=l(t.project),ne=l(" that was distributed as\n\t  mentioned under a) you are allowed to further distribute it\n\t  unmodified, as mentioned at I).  If you make additional changes the\n\t  text under a) applies to those changes.\n       c) Provide all the changes, including source code, with every copy of\n\t  the modified "),oe=l(t.project),ie=l(" you distribute.  This may be done in the form of a\n\t  context diff.  You can choose what license to use for new code you\n\t  add.  The changes and their license must not restrict others from\n\t  making their own changes to the official version of "),re=l(t.project),ae=l(".\n       d) When you have a modified "),ce=l(t.project),se=l(" which includes changes as mentioned\n\t  under c), you can distribute it without the source code for the\n\t  changes if the following three conditions are met:\n\t  - The license that applies to the changes permits you to distribute\n\t    the changes to the "),ue=l(t.project),le=l(" maintainer without fee or restriction, and\n\t    permits the "),de=l(t.project),he=l(" maintainer to include the changes in the official\n\t    version of "),fe=l(t.project),pe=l(" without fee or restriction.\n\t  - You keep the changes for at least three years after last\n\t    distributing the corresponding modified "),me=l(t.project),ge=l(".  When the maintainer\n\t    or someone who you distributed the modified "),ye=l(t.project),je=l(" to asks you (in\n\t    any way) for the changes within this period, you must make them\n\t    available to him.\n\t  - You clearly describe in the distribution how to contact you.  This\n\t    contact information must remain valid for at least three years\n\t    after last distributing the corresponding modified "),be=l(t.project),ve=l(", or as long\n\t    as possible.\n       e) When the GNU General Public License (GPL) applies to the changes,\n\t  you can distribute the modified "),we=l(t.project),$e=l(' under the GNU GPL version 2 or\n\t  any later version.\n    3) A message must be added, at least in the output of the ":version"\n       command and in the intro screen, such that the user of the modified '),xe=l(t.project),_e=l("\n       is able to see that it was modified.  When distributing as mentioned\n       under 2)e) adding the message is only required for as far as this does\n       not conflict with the license used for the changes.\n    4) The contact information as required under 2)a) and 2)d) must not be\n       removed or changed, except that the person himself can make\n       corrections.\n\nIII) If you distribute a modified version of "),Ie=l(t.project),ke=l(", you are encouraged to use\n     the Vim license for your changes and make them available to the\n     maintainer, including the source code.  The preferred way to do this is\n     by e-mail or by uploading the files to a server and e-mailing the URL.\n     If the number of changes is small (e.g., a modified Makefile) e-mailing a\n     context diff will do.  The e-mail address to be used is\n     <"),Te=l(t.email),Ee=l(">\n\nIV)  It is not allowed to remove this license from the distribution of the "),Le=l(t.project),Ce=l("\n     sources, parts of it or from a modified version.  You may use this\n     license for previous "),Ne=l(t.project),Pe=l(" releases instead of the license that they came\n     with, at your option."),p.htmlFor="maintainer",g.id="maintainer",b.htmlFor="project",w.id="project",_.htmlFor="projecturl",k.id="projecturl",L.htmlFor="email",N.id="email",We=[h(g,"input",t.input0_input_handler),h(w,"input",t.input1_input_handler),h(k,"input",t.input2_input_handler),h(N,"input",t.input3_input_handler)]},m(e,o){c(e,n,o),c(e,i,o),c(e,r,o),a(r,p),a(r,m),a(r,g),g.value=t.fullname,c(e,y,o),c(e,j,o),a(j,b),a(j,v),a(j,w),w.value=t.project,c(e,$,o),c(e,x,o),a(x,_),a(x,I),a(x,k),k.value=t.projecturl,c(e,T,o),c(e,E,o),a(E,L),a(E,C),a(E,N),N.value=t.email,c(e,P,o),c(e,W,o),a(W,M),a(W,V),a(W,Y),a(W,G),a(W,F),a(W,U),a(W,q),a(W,B),a(W,O),a(W,A),a(W,R),a(W,S),a(W,z),a(W,D),a(W,H),a(W,J),a(W,K),a(W,Q),a(W,X),a(W,Z),a(W,ee),a(W,te),a(W,ne),a(W,oe),a(W,ie),a(W,re),a(W,ae),a(W,ce),a(W,se),a(W,ue),a(W,le),a(W,de),a(W,he),a(W,fe),a(W,pe),a(W,me),a(W,ge),a(W,ye),a(W,je),a(W,be),a(W,ve),a(W,we),a(W,$e),a(W,xe),a(W,_e),a(W,Ie),a(W,ke),a(W,Te),a(W,Ee),a(W,Le),a(W,Ce),a(W,Ne),a(W,Pe)},p(e,t){e.fullname&&g.value!==t.fullname&&(g.value=t.fullname),e.project&&w.value!==t.project&&(w.value=t.project),e.projecturl&&k.value!==t.projecturl&&(k.value=t.projecturl),e.email&&N.value!==t.email&&(N.value=t.email),e.project&&(f(V,t.project),f(G,t.project),f(U,t.project),f(B,t.project),f(A,t.project),f(S,t.project),f(D,t.project),f(J,t.project)),e.fullname&&f(Q,t.fullname),e.projecturl&&f(Z,t.projecturl),e.project&&(f(te,t.project),f(oe,t.project),f(re,t.project),f(ce,t.project),f(ue,t.project),f(de,t.project),f(fe,t.project),f(me,t.project),f(ye,t.project),f(be,t.project),f(we,t.project),f(xe,t.project),f(Ie,t.project)),e.email&&f(Te,t.email),e.project&&(f(Le,t.project),f(Ne,t.project))},i:e,o:e,d(e){e&&(s(n),s(i),s(r),s(y),s(j),s($),s(x),s(T),s(E),s(P),s(W)),o(We)}}}function L(e,t,n){let o="Bram Moolenaar <Bram@vim.org>",i="Vim",r="vim.sf.net, www.vim.org and/or comp.editors",a="maintainer@vim.org";return{fullname:o,project:i,projecturl:r,email:a,input0_input_handler:function(){o=this.value,n("fullname",o)},input1_input_handler:function(){i=this.value,n("project",i)},input2_input_handler:function(){r=this.value,n("projecturl",r)},input3_input_handler:function(){a=this.value,n("email",a)}}}return new class extends T{constructor(e){super(),k(this,e,L,E,r,[])}}({target:document.body})}();
+
+(function(l, i, v, e) { v = l.createElement(i); v.async = 1; v.src = '//' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; e = l.getElementsByTagName(i)[0]; e.parentNode.insertBefore(v, e)})(document, 'script');
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_data(text, data) {
+        data = '' + data;
+        if (text.data !== data)
+            text.data = data;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    const dirty_components = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    function flush() {
+        const seen_callbacks = new Set();
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (dirty_components.length) {
+                const component = dirty_components.shift();
+                set_current_component(component);
+                update(component.$$);
+            }
+            while (binding_callbacks.length)
+                binding_callbacks.shift()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            while (render_callbacks.length) {
+                const callback = render_callbacks.pop();
+                if (!seen_callbacks.has(callback)) {
+                    callback();
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                }
+            }
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+    }
+    function update($$) {
+        if ($$.fragment) {
+            $$.update($$.dirty);
+            run_all($$.before_render);
+            $$.fragment.p($$.dirty, $$.ctx);
+            $$.dirty = null;
+            $$.after_render.forEach(add_render_callback);
+        }
+    }
+    function mount_component(component, target, anchor) {
+        const { fragment, on_mount, on_destroy, after_render } = component.$$;
+        fragment.m(target, anchor);
+        // onMount happens after the initial afterUpdate. Because
+        // afterUpdate callbacks happen in reverse order (inner first)
+        // we schedule onMount callbacks before afterUpdate callbacks
+        add_render_callback(() => {
+            const new_on_destroy = on_mount.map(run).filter(is_function);
+            if (on_destroy) {
+                on_destroy.push(...new_on_destroy);
+            }
+            else {
+                // Edge case - component was destroyed immediately,
+                // most likely as a result of a binding initialising
+                run_all(new_on_destroy);
+            }
+            component.$$.on_mount = [];
+        });
+        after_render.forEach(add_render_callback);
+    }
+    function destroy(component, detaching) {
+        if (component.$$) {
+            run_all(component.$$.on_destroy);
+            component.$$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            component.$$.on_destroy = component.$$.fragment = null;
+            component.$$.ctx = {};
+        }
+    }
+    function make_dirty(component, key) {
+        if (!component.$$.dirty) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty = blank_object();
+        }
+        component.$$.dirty[key] = true;
+    }
+    function init(component, options, instance, create_fragment, not_equal$$1, prop_names) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const props = options.props || {};
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props: prop_names,
+            update: noop,
+            not_equal: not_equal$$1,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            before_render: [],
+            after_render: [],
+            context: new Map(parent_component ? parent_component.$$.context : []),
+            // everything else
+            callbacks: blank_object(),
+            dirty: null
+        };
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, props, (key, value) => {
+                if ($$.ctx && not_equal$$1($$.ctx[key], $$.ctx[key] = value)) {
+                    if ($$.bound[key])
+                        $$.bound[key](value);
+                    if (ready)
+                        make_dirty(component, key);
+                }
+            })
+            : props;
+        $$.update();
+        ready = true;
+        run_all($$.before_render);
+        $$.fragment = create_fragment($$.ctx);
+        if (options.target) {
+            if (options.hydrate) {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment.l(children(options.target));
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment.c();
+            }
+            if (options.intro && component.$$.fragment.i)
+                component.$$.fragment.i();
+            mount_component(component, options.target, options.anchor);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    class SvelteComponent {
+        $destroy() {
+            destroy(this, true);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set() {
+            // overridden by instance, if it has props
+        }
+    }
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error(`'target' is a required option`);
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn(`Component was already destroyed`); // eslint-disable-line no-console
+            };
+        }
+    }
+
+    /* src/App.svelte generated by Svelte v3.5.1 */
+
+    const file = "src/App.svelte";
+
+    function create_fragment(ctx) {
+    	var h1, t1, fieldset0, label0, t3, input0, t4, fieldset1, label1, t6, input1, t7, fieldset2, label2, t9, input2, t10, fieldset3, label3, t12, input3, t13, button, t15, textarea, textarea_value_value, t16, pre, t17, t18, t19, t20, t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39, t40, t41, t42, t43, t44, t45, t46, t47, t48, t49, t50, t51, t52, t53, t54, t55, t56, t57, t58, t59, t60, t61, t62, t63, t64, t65, t66, t67, t68, t69, dispose;
+
+    	return {
+    		c: function create() {
+    			h1 = element("h1");
+    			h1.textContent = "Vim License";
+    			t1 = space();
+    			fieldset0 = element("fieldset");
+    			label0 = element("label");
+    			label0.textContent = "Project Name";
+    			t3 = space();
+    			input0 = element("input");
+    			t4 = space();
+    			fieldset1 = element("fieldset");
+    			label1 = element("label");
+    			label1.textContent = "Project URL";
+    			t6 = space();
+    			input1 = element("input");
+    			t7 = space();
+    			fieldset2 = element("fieldset");
+    			label2 = element("label");
+    			label2.textContent = "Maintainer";
+    			t9 = space();
+    			input2 = element("input");
+    			t10 = space();
+    			fieldset3 = element("fieldset");
+    			label3 = element("label");
+    			label3.textContent = "Maintainer Email";
+    			t12 = space();
+    			input3 = element("input");
+    			t13 = space();
+    			button = element("button");
+    			button.textContent = "Copy";
+    			t15 = space();
+    			textarea = element("textarea");
+    			t16 = space();
+    			pre = element("pre");
+    			t17 = text("VIM LICENSE\n\nI)  There are no restrictions on distributing unmodified copies of ");
+    			t18 = text(ctx.project);
+    			t19 = text(" except\n    that they must include this license text.  You can also distribute\n    unmodified parts of ");
+    			t20 = text(ctx.project);
+    			t21 = text(", likewise unrestricted except that they must\n    include this license text.  You are also allowed to include executables\n    that you made from the unmodified ");
+    			t22 = text(ctx.project);
+    			t23 = text(" sources, plus your own usage\n    examples and Vim scripts.\n\nII) It is allowed to distribute a modified (or extended) version of ");
+    			t24 = text(ctx.project);
+    			t25 = text(",\n    including executables and/or source code, when the following four\n    conditions are met:\n    1) This license text must be included unmodified.\n    2) The modified ");
+    			t26 = text(ctx.project);
+    			t27 = text(" must be distributed in one of the following five ways:\n       a) If you make changes to ");
+    			t28 = text(ctx.project);
+    			t29 = text(" yourself, you must clearly describe in\n\t  the distribution how to contact you.  When the maintainer asks you\n\t  (in any way) for a copy of the modified ");
+    			t30 = text(ctx.project);
+    			t31 = text(" you distributed, you\n\t  must make your changes, including source code, available to the\n\t  maintainer without fee.  The maintainer reserves the right to\n\t  include your changes in the official version of ");
+    			t32 = text(ctx.project);
+    			t33 = text(".  What the\n\t  maintainer will do with your changes and under what license they\n\t  will be distributed is negotiable.  If there has been no negotiation\n\t  then this license, or a later version, also applies to your changes.\n\t  The current maintainer is ");
+    			t34 = text(ctx.fullname);
+    			t35 = text(".  If this\n\t  changes it will be announced in appropriate places (most likely\n\t  ");
+    			t36 = text(ctx.projecturl);
+    			t37 = text(").  When it is completely\n\t  impossible to contact the maintainer, the obligation to send him\n\t  your changes ceases.  Once the maintainer has confirmed that he has\n\t  received your changes they will not have to be sent again.\n       b) If you have received a modified ");
+    			t38 = text(ctx.project);
+    			t39 = text(" that was distributed as\n\t  mentioned under a) you are allowed to further distribute it\n\t  unmodified, as mentioned at I).  If you make additional changes the\n\t  text under a) applies to those changes.\n       c) Provide all the changes, including source code, with every copy of\n\t  the modified ");
+    			t40 = text(ctx.project);
+    			t41 = text(" you distribute.  This may be done in the form of a\n\t  context diff.  You can choose what license to use for new code you\n\t  add.  The changes and their license must not restrict others from\n\t  making their own changes to the official version of ");
+    			t42 = text(ctx.project);
+    			t43 = text(".\n       d) When you have a modified ");
+    			t44 = text(ctx.project);
+    			t45 = text(" which includes changes as mentioned\n\t  under c), you can distribute it without the source code for the\n\t  changes if the following three conditions are met:\n\t  - The license that applies to the changes permits you to distribute\n\t    the changes to the ");
+    			t46 = text(ctx.project);
+    			t47 = text(" maintainer without fee or restriction, and\n\t    permits the ");
+    			t48 = text(ctx.project);
+    			t49 = text(" maintainer to include the changes in the official\n\t    version of ");
+    			t50 = text(ctx.project);
+    			t51 = text(" without fee or restriction.\n\t  - You keep the changes for at least three years after last\n\t    distributing the corresponding modified ");
+    			t52 = text(ctx.project);
+    			t53 = text(".  When the maintainer\n\t    or someone who you distributed the modified ");
+    			t54 = text(ctx.project);
+    			t55 = text(" to asks you (in\n\t    any way) for the changes within this period, you must make them\n\t    available to him.\n\t  - You clearly describe in the distribution how to contact you.  This\n\t    contact information must remain valid for at least three years\n\t    after last distributing the corresponding modified ");
+    			t56 = text(ctx.project);
+    			t57 = text(", or as long\n\t    as possible.\n       e) When the GNU General Public License (GPL) applies to the changes,\n\t  you can distribute the modified ");
+    			t58 = text(ctx.project);
+    			t59 = text(" under the GNU GPL version 2 or\n\t  any later version.\n    3) A message must be added, at least in the output of the \":version\"\n       command and in the intro screen, such that the user of the modified ");
+    			t60 = text(ctx.project);
+    			t61 = text("\n       is able to see that it was modified.  When distributing as mentioned\n       under 2)e) adding the message is only required for as far as this does\n       not conflict with the license used for the changes.\n    4) The contact information as required under 2)a) and 2)d) must not be\n       removed or changed, except that the person himself can make\n       corrections.\n\nIII) If you distribute a modified version of ");
+    			t62 = text(ctx.project);
+    			t63 = text(", you are encouraged to use\n     the Vim license for your changes and make them available to the\n     maintainer, including the source code.  The preferred way to do this is\n     by e-mail or by uploading the files to a server and e-mailing the URL.\n     If the number of changes is small (e.g., a modified Makefile) e-mailing a\n     context diff will do.  The e-mail address to be used is\n     <");
+    			t64 = text(ctx.email);
+    			t65 = text(">\n\nIV)  It is not allowed to remove this license from the distribution of the ");
+    			t66 = text(ctx.project);
+    			t67 = text("\n     sources, parts of it or from a modified version.  You may use this\n     license for previous ");
+    			t68 = text(ctx.project);
+    			t69 = text(" releases instead of the license that they came\n     with, at your option.");
+    			add_location(h1, file, 25, 0, 401);
+    			label0.htmlFor = "project";
+    			add_location(label0, file, 28, 0, 434);
+    			input0.id = "project";
+    			add_location(input0, file, 29, 0, 476);
+    			add_location(fieldset0, file, 27, 0, 423);
+    			label1.htmlFor = "projecturl";
+    			add_location(label1, file, 32, 0, 543);
+    			input1.id = "projecturl";
+    			add_location(input1, file, 33, 0, 587);
+    			add_location(fieldset1, file, 31, 0, 532);
+    			label2.htmlFor = "maintainer";
+    			add_location(label2, file, 36, 0, 660);
+    			input2.id = "maintainer";
+    			add_location(input2, file, 37, 0, 703);
+    			add_location(fieldset2, file, 35, 0, 649);
+    			label3.htmlFor = "email";
+    			add_location(label3, file, 40, 0, 774);
+    			input3.id = "email";
+    			add_location(input3, file, 41, 0, 818);
+    			add_location(fieldset3, file, 39, 0, 763);
+    			button.id = "copy-license";
+    			add_location(button, file, 44, 0, 871);
+    			textarea.id = "license-text";
+    			textarea.readOnly = true;
+    			textarea.value = textarea_value_value = "VIM LICENSE\n\nI)  There are no restrictions on distributing unmodified copies of " + ctx.project + " except\n    that they must include this license text.  You can also distribute\n    unmodified parts of " + ctx.project + ", likewise unrestricted except that they must\n    include this license text.  You are also allowed to include executables\n    that you made from the unmodified " + ctx.project + " sources, plus your own usage\n    examples and Vim scripts.\n\nII) It is allowed to distribute a modified (or extended) version of " + ctx.project + ",\n    including executables and/or source code, when the following four\n    conditions are met:\n    1) This license text must be included unmodified.\n    2) The modified " + ctx.project + " must be distributed in one of the following five ways:\n       a) If you make changes to " + ctx.project + " yourself, you must clearly describe in\n\t  the distribution how to contact you.  When the maintainer asks you\n\t  (in any way) for a copy of the modified " + ctx.project + " you distributed, you\n\t  must make your changes, including source code, available to the\n\t  maintainer without fee.  The maintainer reserves the right to\n\t  include your changes in the official version of " + ctx.project + ".  What the\n\t  maintainer will do with your changes and under what license they\n\t  will be distributed is negotiable.  If there has been no negotiation\n\t  then this license, or a later version, also applies to your changes.\n\t  The current maintainer is " + ctx.fullname + ".  If this\n\t  changes it will be announced in appropriate places (most likely\n\t  " + ctx.projecturl + ").  When it is completely\n\t  impossible to contact the maintainer, the obligation to send him\n\t  your changes ceases.  Once the maintainer has confirmed that he has\n\t  received your changes they will not have to be sent again.\n       b) If you have received a modified " + ctx.project + " that was distributed as\n\t  mentioned under a) you are allowed to further distribute it\n\t  unmodified, as mentioned at I).  If you make additional changes the\n\t  text under a) applies to those changes.\n       c) Provide all the changes, including source code, with every copy of\n\t  the modified " + ctx.project + " you distribute.  This may be done in the form of a\n\t  context diff.  You can choose what license to use for new code you\n\t  add.  The changes and their license must not restrict others from\n\t  making their own changes to the official version of " + ctx.project + ".\n       d) When you have a modified " + ctx.project + " which includes changes as mentioned\n\t  under c), you can distribute it without the source code for the\n\t  changes if the following three conditions are met:\n\t  - The license that applies to the changes permits you to distribute\n\t    the changes to the " + ctx.project + " maintainer without fee or restriction, and\n\t    permits the " + ctx.project + " maintainer to include the changes in the official\n\t    version of " + ctx.project + " without fee or restriction.\n\t  - You keep the changes for at least three years after last\n\t    distributing the corresponding modified " + ctx.project + ".  When the maintainer\n\t    or someone who you distributed the modified " + ctx.project + " to asks you (in\n\t    any way) for the changes within this period, you must make them\n\t    available to him.\n\t  - You clearly describe in the distribution how to contact you.  This\n\t    contact information must remain valid for at least three years\n\t    after last distributing the corresponding modified " + ctx.project + ", or as long\n\t    as possible.\n       e) When the GNU General Public License (GPL) applies to the changes,\n\t  you can distribute the modified " + ctx.project + " under the GNU GPL version 2 or\n\t  any later version.\n    3) A message must be added, at least in the output of the \":version\"\n       command and in the intro screen, such that the user of the modified " + ctx.project + "\n       is able to see that it was modified.  When distributing as mentioned\n       under 2)e) adding the message is only required for as far as this does\n       not conflict with the license used for the changes.\n    4) The contact information as required under 2)a) and 2)d) must not be\n       removed or changed, except that the person himself can make\n       corrections.\n\nIII) If you distribute a modified version of " + ctx.project + ", you are encouraged to use\n     the Vim license for your changes and make them available to the\n     maintainer, including the source code.  The preferred way to do this is\n     by e-mail or by uploading the files to a server and e-mailing the URL.\n     If the number of changes is small (e.g., a modified Makefile) e-mailing a\n     context diff will do.  The e-mail address to be used is\n     <" + ctx.email + ">\n\nIV)  It is not allowed to remove this license from the distribution of the " + ctx.project + "\n     sources, parts of it or from a modified version.  You may use this\n     license for previous " + ctx.project + " releases instead of the license that they came\n     with, at your option.";
+    			textarea.className = "svelte-1lu91mc";
+    			add_location(textarea, file, 46, 0, 928);
+    			pre.id = "license-preview";
+    			add_location(pre, file, 125, 0, 5797);
+
+    			dispose = [
+    				listen(input0, "input", ctx.input0_input_handler),
+    				listen(input1, "input", ctx.input1_input_handler),
+    				listen(input2, "input", ctx.input2_input_handler),
+    				listen(input3, "input", ctx.input3_input_handler),
+    				listen(button, "click", ctx.copy)
+    			];
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, h1, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, fieldset0, anchor);
+    			append(fieldset0, label0);
+    			append(fieldset0, t3);
+    			append(fieldset0, input0);
+
+    			input0.value = ctx.project;
+
+    			insert(target, t4, anchor);
+    			insert(target, fieldset1, anchor);
+    			append(fieldset1, label1);
+    			append(fieldset1, t6);
+    			append(fieldset1, input1);
+
+    			input1.value = ctx.projecturl;
+
+    			insert(target, t7, anchor);
+    			insert(target, fieldset2, anchor);
+    			append(fieldset2, label2);
+    			append(fieldset2, t9);
+    			append(fieldset2, input2);
+
+    			input2.value = ctx.fullname;
+
+    			insert(target, t10, anchor);
+    			insert(target, fieldset3, anchor);
+    			append(fieldset3, label3);
+    			append(fieldset3, t12);
+    			append(fieldset3, input3);
+
+    			input3.value = ctx.email;
+
+    			insert(target, t13, anchor);
+    			insert(target, button, anchor);
+    			insert(target, t15, anchor);
+    			insert(target, textarea, anchor);
+    			insert(target, t16, anchor);
+    			insert(target, pre, anchor);
+    			append(pre, t17);
+    			append(pre, t18);
+    			append(pre, t19);
+    			append(pre, t20);
+    			append(pre, t21);
+    			append(pre, t22);
+    			append(pre, t23);
+    			append(pre, t24);
+    			append(pre, t25);
+    			append(pre, t26);
+    			append(pre, t27);
+    			append(pre, t28);
+    			append(pre, t29);
+    			append(pre, t30);
+    			append(pre, t31);
+    			append(pre, t32);
+    			append(pre, t33);
+    			append(pre, t34);
+    			append(pre, t35);
+    			append(pre, t36);
+    			append(pre, t37);
+    			append(pre, t38);
+    			append(pre, t39);
+    			append(pre, t40);
+    			append(pre, t41);
+    			append(pre, t42);
+    			append(pre, t43);
+    			append(pre, t44);
+    			append(pre, t45);
+    			append(pre, t46);
+    			append(pre, t47);
+    			append(pre, t48);
+    			append(pre, t49);
+    			append(pre, t50);
+    			append(pre, t51);
+    			append(pre, t52);
+    			append(pre, t53);
+    			append(pre, t54);
+    			append(pre, t55);
+    			append(pre, t56);
+    			append(pre, t57);
+    			append(pre, t58);
+    			append(pre, t59);
+    			append(pre, t60);
+    			append(pre, t61);
+    			append(pre, t62);
+    			append(pre, t63);
+    			append(pre, t64);
+    			append(pre, t65);
+    			append(pre, t66);
+    			append(pre, t67);
+    			append(pre, t68);
+    			append(pre, t69);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.project && (input0.value !== ctx.project)) input0.value = ctx.project;
+    			if (changed.projecturl && (input1.value !== ctx.projecturl)) input1.value = ctx.projecturl;
+    			if (changed.fullname && (input2.value !== ctx.fullname)) input2.value = ctx.fullname;
+    			if (changed.email && (input3.value !== ctx.email)) input3.value = ctx.email;
+
+    			if ((changed.project || changed.fullname || changed.projecturl || changed.email) && textarea_value_value !== (textarea_value_value = "VIM LICENSE\n\nI)  There are no restrictions on distributing unmodified copies of " + ctx.project + " except\n    that they must include this license text.  You can also distribute\n    unmodified parts of " + ctx.project + ", likewise unrestricted except that they must\n    include this license text.  You are also allowed to include executables\n    that you made from the unmodified " + ctx.project + " sources, plus your own usage\n    examples and Vim scripts.\n\nII) It is allowed to distribute a modified (or extended) version of " + ctx.project + ",\n    including executables and/or source code, when the following four\n    conditions are met:\n    1) This license text must be included unmodified.\n    2) The modified " + ctx.project + " must be distributed in one of the following five ways:\n       a) If you make changes to " + ctx.project + " yourself, you must clearly describe in\n\t  the distribution how to contact you.  When the maintainer asks you\n\t  (in any way) for a copy of the modified " + ctx.project + " you distributed, you\n\t  must make your changes, including source code, available to the\n\t  maintainer without fee.  The maintainer reserves the right to\n\t  include your changes in the official version of " + ctx.project + ".  What the\n\t  maintainer will do with your changes and under what license they\n\t  will be distributed is negotiable.  If there has been no negotiation\n\t  then this license, or a later version, also applies to your changes.\n\t  The current maintainer is " + ctx.fullname + ".  If this\n\t  changes it will be announced in appropriate places (most likely\n\t  " + ctx.projecturl + ").  When it is completely\n\t  impossible to contact the maintainer, the obligation to send him\n\t  your changes ceases.  Once the maintainer has confirmed that he has\n\t  received your changes they will not have to be sent again.\n       b) If you have received a modified " + ctx.project + " that was distributed as\n\t  mentioned under a) you are allowed to further distribute it\n\t  unmodified, as mentioned at I).  If you make additional changes the\n\t  text under a) applies to those changes.\n       c) Provide all the changes, including source code, with every copy of\n\t  the modified " + ctx.project + " you distribute.  This may be done in the form of a\n\t  context diff.  You can choose what license to use for new code you\n\t  add.  The changes and their license must not restrict others from\n\t  making their own changes to the official version of " + ctx.project + ".\n       d) When you have a modified " + ctx.project + " which includes changes as mentioned\n\t  under c), you can distribute it without the source code for the\n\t  changes if the following three conditions are met:\n\t  - The license that applies to the changes permits you to distribute\n\t    the changes to the " + ctx.project + " maintainer without fee or restriction, and\n\t    permits the " + ctx.project + " maintainer to include the changes in the official\n\t    version of " + ctx.project + " without fee or restriction.\n\t  - You keep the changes for at least three years after last\n\t    distributing the corresponding modified " + ctx.project + ".  When the maintainer\n\t    or someone who you distributed the modified " + ctx.project + " to asks you (in\n\t    any way) for the changes within this period, you must make them\n\t    available to him.\n\t  - You clearly describe in the distribution how to contact you.  This\n\t    contact information must remain valid for at least three years\n\t    after last distributing the corresponding modified " + ctx.project + ", or as long\n\t    as possible.\n       e) When the GNU General Public License (GPL) applies to the changes,\n\t  you can distribute the modified " + ctx.project + " under the GNU GPL version 2 or\n\t  any later version.\n    3) A message must be added, at least in the output of the \":version\"\n       command and in the intro screen, such that the user of the modified " + ctx.project + "\n       is able to see that it was modified.  When distributing as mentioned\n       under 2)e) adding the message is only required for as far as this does\n       not conflict with the license used for the changes.\n    4) The contact information as required under 2)a) and 2)d) must not be\n       removed or changed, except that the person himself can make\n       corrections.\n\nIII) If you distribute a modified version of " + ctx.project + ", you are encouraged to use\n     the Vim license for your changes and make them available to the\n     maintainer, including the source code.  The preferred way to do this is\n     by e-mail or by uploading the files to a server and e-mailing the URL.\n     If the number of changes is small (e.g., a modified Makefile) e-mailing a\n     context diff will do.  The e-mail address to be used is\n     <" + ctx.email + ">\n\nIV)  It is not allowed to remove this license from the distribution of the " + ctx.project + "\n     sources, parts of it or from a modified version.  You may use this\n     license for previous " + ctx.project + " releases instead of the license that they came\n     with, at your option.")) {
+    				textarea.value = textarea_value_value;
+    			}
+
+    			if (changed.project) {
+    				set_data(t18, ctx.project);
+    				set_data(t20, ctx.project);
+    				set_data(t22, ctx.project);
+    				set_data(t24, ctx.project);
+    				set_data(t26, ctx.project);
+    				set_data(t28, ctx.project);
+    				set_data(t30, ctx.project);
+    				set_data(t32, ctx.project);
+    			}
+
+    			if (changed.fullname) {
+    				set_data(t34, ctx.fullname);
+    			}
+
+    			if (changed.projecturl) {
+    				set_data(t36, ctx.projecturl);
+    			}
+
+    			if (changed.project) {
+    				set_data(t38, ctx.project);
+    				set_data(t40, ctx.project);
+    				set_data(t42, ctx.project);
+    				set_data(t44, ctx.project);
+    				set_data(t46, ctx.project);
+    				set_data(t48, ctx.project);
+    				set_data(t50, ctx.project);
+    				set_data(t52, ctx.project);
+    				set_data(t54, ctx.project);
+    				set_data(t56, ctx.project);
+    				set_data(t58, ctx.project);
+    				set_data(t60, ctx.project);
+    				set_data(t62, ctx.project);
+    			}
+
+    			if (changed.email) {
+    				set_data(t64, ctx.email);
+    			}
+
+    			if (changed.project) {
+    				set_data(t66, ctx.project);
+    				set_data(t68, ctx.project);
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(h1);
+    				detach(t1);
+    				detach(fieldset0);
+    				detach(t4);
+    				detach(fieldset1);
+    				detach(t7);
+    				detach(fieldset2);
+    				detach(t10);
+    				detach(fieldset3);
+    				detach(t13);
+    				detach(button);
+    				detach(t15);
+    				detach(textarea);
+    				detach(t16);
+    				detach(pre);
+    			}
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let fullname = 'Bram Moolenaar <Bram@vim.org>';
+    let project = 'Vim';
+    let projecturl = 'vim.sf.net, www.vim.org and/or comp.editors';
+    let email = 'maintainer@vim.org';
+
+    const copy = () => {
+      document.querySelector("#license-text").select();
+      document.execCommand("copy");
+    };
+
+    	function input0_input_handler() {
+    		project = this.value;
+    		$$invalidate('project', project);
+    	}
+
+    	function input1_input_handler() {
+    		projecturl = this.value;
+    		$$invalidate('projecturl', projecturl);
+    	}
+
+    	function input2_input_handler() {
+    		fullname = this.value;
+    		$$invalidate('fullname', fullname);
+    	}
+
+    	function input3_input_handler() {
+    		email = this.value;
+    		$$invalidate('email', email);
+    	}
+
+    	return {
+    		fullname,
+    		project,
+    		projecturl,
+    		email,
+    		copy,
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler,
+    		input3_input_handler
+    	};
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, []);
+    	}
+    }
+
+    var app = new App({
+    	target: document.body
+    });
+
+    return app;
+
+}());
 //# sourceMappingURL=bundle.js.map
