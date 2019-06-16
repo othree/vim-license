@@ -243,13 +243,15 @@ var app = (function () {
     const file = "src/App.svelte";
 
     function create_fragment(ctx) {
-    	var h1, t1, fieldset0, label0, t3, input0, t4, fieldset1, label1, t6, input1, t7, fieldset2, label2, t9, input2, t10, fieldset3, label3, t12, input3, t13, button, t15, textarea, textarea_value_value, t16, pre, t17, t18, t19, t20, t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39, t40, t41, t42, t43, t44, t45, t46, t47, t48, t49, t50, t51, t52, t53, t54, t55, t56, t57, t58, t59, t60, t61, t62, t63, t64, t65, t66, t67, t68, t69, dispose;
+    	var main, h1, t1, div0, fieldset0, label0, t3, input0, t4, fieldset1, label1, t6, input1, t7, fieldset2, label2, t9, input2, t10, fieldset3, label3, t12, input3, t13, div1, button, t15, textarea, textarea_value_value, t16, pre, t17, t18, t19, t20, t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39, t40, t41, t42, t43, t44, t45, t46, t47, t48, t49, t50, t51, t52, t53, t54, t55, t56, t57, t58, t59, t60, t61, t62, t63, t64, t65, t66, t67, t68, t69, dispose;
 
     	return {
     		c: function create() {
+    			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "Vim License";
     			t1 = space();
+    			div0 = element("div");
     			fieldset0 = element("fieldset");
     			label0 = element("label");
     			label0.textContent = "Project Name";
@@ -274,6 +276,7 @@ var app = (function () {
     			t12 = space();
     			input3 = element("input");
     			t13 = space();
+    			div1 = element("div");
     			button = element("button");
     			button.textContent = "Copy";
     			t15 = space();
@@ -333,36 +336,58 @@ var app = (function () {
     			t67 = text("\n     sources, parts of it or from a modified version.  You may use this\n     license for previous ");
     			t68 = text(ctx.project);
     			t69 = text(" releases instead of the license that they came\n     with, at your option.");
-    			add_location(h1, file, 25, 0, 401);
+    			add_location(h1, file, 72, 0, 957);
     			label0.htmlFor = "project";
-    			add_location(label0, file, 28, 0, 434);
+    			label0.className = "svelte-1lsja4i";
+    			add_location(label0, file, 76, 2, 1012);
     			input0.id = "project";
-    			add_location(input0, file, 29, 0, 476);
-    			add_location(fieldset0, file, 27, 0, 423);
+    			input0.className = "svelte-1lsja4i";
+    			add_location(input0, file, 77, 2, 1056);
+    			fieldset0.className = "svelte-1lsja4i";
+    			add_location(fieldset0, file, 75, 2, 999);
     			label1.htmlFor = "projecturl";
-    			add_location(label1, file, 32, 0, 543);
+    			label1.className = "svelte-1lsja4i";
+    			add_location(label1, file, 80, 2, 1129);
     			input1.id = "projecturl";
-    			add_location(input1, file, 33, 0, 587);
-    			add_location(fieldset1, file, 31, 0, 532);
+    			input1.className = "svelte-1lsja4i";
+    			add_location(input1, file, 81, 2, 1175);
+    			fieldset1.className = "svelte-1lsja4i";
+    			add_location(fieldset1, file, 79, 2, 1116);
     			label2.htmlFor = "maintainer";
-    			add_location(label2, file, 36, 0, 660);
+    			label2.className = "svelte-1lsja4i";
+    			add_location(label2, file, 84, 2, 1254);
     			input2.id = "maintainer";
-    			add_location(input2, file, 37, 0, 703);
-    			add_location(fieldset2, file, 35, 0, 649);
+    			input2.className = "svelte-1lsja4i";
+    			add_location(input2, file, 85, 2, 1299);
+    			fieldset2.className = "svelte-1lsja4i";
+    			add_location(fieldset2, file, 83, 2, 1241);
     			label3.htmlFor = "email";
-    			add_location(label3, file, 40, 0, 774);
+    			label3.className = "svelte-1lsja4i";
+    			add_location(label3, file, 88, 2, 1376);
     			input3.id = "email";
-    			add_location(input3, file, 41, 0, 818);
-    			add_location(fieldset3, file, 39, 0, 763);
+    			input3.className = "svelte-1lsja4i";
+    			add_location(input3, file, 89, 2, 1422);
+    			fieldset3.className = "svelte-1lsja4i";
+    			add_location(fieldset3, file, 87, 2, 1363);
+    			div0.id = "inputs";
+    			div0.className = "svelte-1lsja4i";
+    			add_location(div0, file, 74, 0, 979);
     			button.id = "copy-license";
-    			add_location(button, file, 44, 0, 871);
+    			button.className = "svelte-1lsja4i";
+    			add_location(button, file, 94, 2, 1505);
     			textarea.id = "license-text";
     			textarea.readOnly = true;
     			textarea.value = textarea_value_value = "VIM LICENSE\n\nI)  There are no restrictions on distributing unmodified copies of " + ctx.project + " except\n    that they must include this license text.  You can also distribute\n    unmodified parts of " + ctx.project + ", likewise unrestricted except that they must\n    include this license text.  You are also allowed to include executables\n    that you made from the unmodified " + ctx.project + " sources, plus your own usage\n    examples and Vim scripts.\n\nII) It is allowed to distribute a modified (or extended) version of " + ctx.project + ",\n    including executables and/or source code, when the following four\n    conditions are met:\n    1) This license text must be included unmodified.\n    2) The modified " + ctx.project + " must be distributed in one of the following five ways:\n       a) If you make changes to " + ctx.project + " yourself, you must clearly describe in\n\t  the distribution how to contact you.  When the maintainer asks you\n\t  (in any way) for a copy of the modified " + ctx.project + " you distributed, you\n\t  must make your changes, including source code, available to the\n\t  maintainer without fee.  The maintainer reserves the right to\n\t  include your changes in the official version of " + ctx.project + ".  What the\n\t  maintainer will do with your changes and under what license they\n\t  will be distributed is negotiable.  If there has been no negotiation\n\t  then this license, or a later version, also applies to your changes.\n\t  The current maintainer is " + ctx.fullname + ".  If this\n\t  changes it will be announced in appropriate places (most likely\n\t  " + ctx.projecturl + ").  When it is completely\n\t  impossible to contact the maintainer, the obligation to send him\n\t  your changes ceases.  Once the maintainer has confirmed that he has\n\t  received your changes they will not have to be sent again.\n       b) If you have received a modified " + ctx.project + " that was distributed as\n\t  mentioned under a) you are allowed to further distribute it\n\t  unmodified, as mentioned at I).  If you make additional changes the\n\t  text under a) applies to those changes.\n       c) Provide all the changes, including source code, with every copy of\n\t  the modified " + ctx.project + " you distribute.  This may be done in the form of a\n\t  context diff.  You can choose what license to use for new code you\n\t  add.  The changes and their license must not restrict others from\n\t  making their own changes to the official version of " + ctx.project + ".\n       d) When you have a modified " + ctx.project + " which includes changes as mentioned\n\t  under c), you can distribute it without the source code for the\n\t  changes if the following three conditions are met:\n\t  - The license that applies to the changes permits you to distribute\n\t    the changes to the " + ctx.project + " maintainer without fee or restriction, and\n\t    permits the " + ctx.project + " maintainer to include the changes in the official\n\t    version of " + ctx.project + " without fee or restriction.\n\t  - You keep the changes for at least three years after last\n\t    distributing the corresponding modified " + ctx.project + ".  When the maintainer\n\t    or someone who you distributed the modified " + ctx.project + " to asks you (in\n\t    any way) for the changes within this period, you must make them\n\t    available to him.\n\t  - You clearly describe in the distribution how to contact you.  This\n\t    contact information must remain valid for at least three years\n\t    after last distributing the corresponding modified " + ctx.project + ", or as long\n\t    as possible.\n       e) When the GNU General Public License (GPL) applies to the changes,\n\t  you can distribute the modified " + ctx.project + " under the GNU GPL version 2 or\n\t  any later version.\n    3) A message must be added, at least in the output of the \":version\"\n       command and in the intro screen, such that the user of the modified " + ctx.project + "\n       is able to see that it was modified.  When distributing as mentioned\n       under 2)e) adding the message is only required for as far as this does\n       not conflict with the license used for the changes.\n    4) The contact information as required under 2)a) and 2)d) must not be\n       removed or changed, except that the person himself can make\n       corrections.\n\nIII) If you distribute a modified version of " + ctx.project + ", you are encouraged to use\n     the Vim license for your changes and make them available to the\n     maintainer, including the source code.  The preferred way to do this is\n     by e-mail or by uploading the files to a server and e-mailing the URL.\n     If the number of changes is small (e.g., a modified Makefile) e-mailing a\n     context diff will do.  The e-mail address to be used is\n     <" + ctx.email + ">\n\nIV)  It is not allowed to remove this license from the distribution of the " + ctx.project + "\n     sources, parts of it or from a modified version.  You may use this\n     license for previous " + ctx.project + " releases instead of the license that they came\n     with, at your option.";
-    			textarea.className = "svelte-1lu91mc";
-    			add_location(textarea, file, 46, 0, 928);
+    			textarea.className = "svelte-1lsja4i";
+    			add_location(textarea, file, 95, 2, 1563);
+    			div1.id = "buttons";
+    			div1.className = "svelte-1lsja4i";
+    			add_location(div1, file, 93, 0, 1484);
     			pre.id = "license-preview";
-    			add_location(pre, file, 125, 0, 5797);
+    			pre.className = "svelte-1lsja4i";
+    			add_location(pre, file, 175, 0, 6439);
+    			main.className = "svelte-1lsja4i";
+    			add_location(main, file, 70, 0, 949);
 
     			dispose = [
     				listen(input0, "input", ctx.input0_input_handler),
@@ -378,45 +403,48 @@ var app = (function () {
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, h1, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, fieldset0, anchor);
+    			insert(target, main, anchor);
+    			append(main, h1);
+    			append(main, t1);
+    			append(main, div0);
+    			append(div0, fieldset0);
     			append(fieldset0, label0);
     			append(fieldset0, t3);
     			append(fieldset0, input0);
 
     			input0.value = ctx.project;
 
-    			insert(target, t4, anchor);
-    			insert(target, fieldset1, anchor);
+    			append(div0, t4);
+    			append(div0, fieldset1);
     			append(fieldset1, label1);
     			append(fieldset1, t6);
     			append(fieldset1, input1);
 
     			input1.value = ctx.projecturl;
 
-    			insert(target, t7, anchor);
-    			insert(target, fieldset2, anchor);
+    			append(div0, t7);
+    			append(div0, fieldset2);
     			append(fieldset2, label2);
     			append(fieldset2, t9);
     			append(fieldset2, input2);
 
     			input2.value = ctx.fullname;
 
-    			insert(target, t10, anchor);
-    			insert(target, fieldset3, anchor);
+    			append(div0, t10);
+    			append(div0, fieldset3);
     			append(fieldset3, label3);
     			append(fieldset3, t12);
     			append(fieldset3, input3);
 
     			input3.value = ctx.email;
 
-    			insert(target, t13, anchor);
-    			insert(target, button, anchor);
-    			insert(target, t15, anchor);
-    			insert(target, textarea, anchor);
-    			insert(target, t16, anchor);
-    			insert(target, pre, anchor);
+    			append(main, t13);
+    			append(main, div1);
+    			append(div1, button);
+    			append(div1, t15);
+    			append(div1, textarea);
+    			append(main, t16);
+    			append(main, pre);
     			append(pre, t17);
     			append(pre, t18);
     			append(pre, t19);
@@ -532,21 +560,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(h1);
-    				detach(t1);
-    				detach(fieldset0);
-    				detach(t4);
-    				detach(fieldset1);
-    				detach(t7);
-    				detach(fieldset2);
-    				detach(t10);
-    				detach(fieldset3);
-    				detach(t13);
-    				detach(button);
-    				detach(t15);
-    				detach(textarea);
-    				detach(t16);
-    				detach(pre);
+    				detach(main);
     			}
 
     			run_all(dispose);

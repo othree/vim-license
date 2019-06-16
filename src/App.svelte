@@ -14,6 +14,13 @@ const copy = () => {
 
 <style>
 
+main {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 800px;
+	padding-bottom: 2em;
+}
+
 #license-text {
   opacity: 0;
   width: 1px;
@@ -21,30 +28,72 @@ const copy = () => {
   color: transparent;
 }
 
+#license-preview {
+	margin: 2em auto;
+	border: 1px solid #666;
+	padding: 2em 1em;
+	background-color: #fff;
+}
+
+#inputs {
+	margin: 2em auto;
+	border: 1px solid #666;
+	padding: 1em 1em;
+	background-color: #fff;
+}
+
+fieldset {
+	border: none;
+	margin: 1em 0;
+	padding: 0;
+}
+
+fieldset label {
+	margin-bottom: 6px;
+}
+
+fieldset input {
+	width: 80%;
+}
+
+#buttons {
+	margin: 2em auto 1em;
+}
+
+#buttons button {
+	border: 1px solid #666;
+	border-radius: 4px;
+	padding: 6px 24px;
+}
+
 </style>
+
+<main>
 
 <h1>Vim License</h1>
 
-<fieldset>
-<label for="project">Project Name</label>
-<input id="project" bind:value={project} />
-</fieldset>
-<fieldset>
-<label for="projecturl">Project URL</label>
-<input id="projecturl" bind:value={projecturl} />
-</fieldset>
-<fieldset>
-<label for="maintainer">Maintainer</label>
-<input id="maintainer" bind:value={fullname} />
-</fieldset>
-<fieldset>
-<label for="email">Maintainer Email</label>
-<input id="email" bind:value={email} />
-</fieldset>
+<div id="inputs">
+  <fieldset>
+  <label for="project">Project Name</label>
+  <input id="project" bind:value={project} />
+  </fieldset>
+  <fieldset>
+  <label for="projecturl">Project URL</label>
+  <input id="projecturl" bind:value={projecturl} />
+  </fieldset>
+  <fieldset>
+  <label for="maintainer">Maintainer</label>
+  <input id="maintainer" bind:value={fullname} />
+  </fieldset>
+  <fieldset>
+  <label for="email">Maintainer Email</label>
+  <input id="email" bind:value={email} />
+  </fieldset>
+</div>
 
-<button id="copy-license" on:click={copy}>Copy</button>
-
-<textarea id="license-text" readonly>VIM LICENSE
+<div id="buttons">
+  <button id="copy-license" on:click={copy}>Copy</button>
+  <textarea id="license-text" readonly>VIM LICENSE
 
 I)  There are no restrictions on distributing unmodified copies of {project} except
     that they must include this license text.  You can also distribute
@@ -122,6 +171,7 @@ IV)  It is not allowed to remove this license from the distribution of the {proj
      sources, parts of it or from a modified version.  You may use this
      license for previous {project} releases instead of the license that they came
      with, at your option.</textarea>
+</div>
 
 <pre id="license-preview">VIM LICENSE
 
@@ -201,3 +251,5 @@ IV)  It is not allowed to remove this license from the distribution of the {proj
      sources, parts of it or from a modified version.  You may use this
      license for previous {project} releases instead of the license that they came
      with, at your option.</pre>
+
+</main>
