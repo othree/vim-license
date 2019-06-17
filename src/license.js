@@ -1,9 +1,8 @@
 const LENGTH = 78;
 
 const TEXT = [
-  {
-    blankline: 1
-  },
+  'VIM LICENSE',
+  '',
   {
     indent: '   ',
     prefix: 'I) ',
@@ -16,9 +15,7 @@ const TEXT = [
     examples and Vim scripts.
     `
   },
-  {
-    blankline: 1
-  },
+  '',
   {
     indent: '   ',
     prefix: 'II)',
@@ -153,9 +150,7 @@ const TEXT = [
     corrections.
     `
   },
-  {
-    blankline: 1
-  },
+  '',
   {
     indent: '    ',
     prefix: 'III)',
@@ -169,9 +164,7 @@ const TEXT = [
     <${email}>
     `
   },
-  {
-    blankline: 1
-  },
+  '',
   {
     indent: '    ',
     prefix: 'IV) ',
@@ -184,31 +177,29 @@ const TEXT = [
   },
 ];
 
-const gen = (project, projecturl, name, email) => {
-  return `VIM LICENSE\n\n${TEXT.map(part => {
-    if (part.blankline) {
-      return '';
+const gen = (project, projecturl, name, email) => TEXT.map(part => {
+  if (typeof part === 'string') {
+    return part;
+  }
+
+  const p = part.text(project, projecturl, name, email).trim();
+  const words = p.split(/\s+/g);
+
+  const lines = [part.prefix];
+  let row = 0;
+
+  words.forEach(word => {
+    if (lines[row].length + word.length + 1 <= LENGTH) {
+      lines[row] = `${lines[row]} ${word}`;
+    } else {
+      row = row + 1;
+      lines[row] = `${part.indent} ${word}`;
     }
+  });
 
-    const p = part.text(project, projecturl, name, email).trim();
-    const words = p.split(/\s+/g);
+  console.log(lines);
 
-    const lines = [part.prefix];
-    let row = 0;
-
-    words.forEach(word => {
-      if (lines[row].length + word.length + 1 <= LENGTH) {
-        lines[row] = `${lines[row]} ${word}`;
-      } else {
-        row = row + 1;
-        lines[row] = `${part.indent} ${word}`;
-      }
-    });
-
-    console.log(lines);
-
-    return lines.join('\n');
-  }).join('\n')}`;
-};
+  return lines.join('\n');
+}).join('\n');
 
 export default gen;
