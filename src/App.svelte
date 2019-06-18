@@ -27,19 +27,25 @@ main, footer {
 	max-width: 800px;
 }
 
+h1 {
+	color: #007f00;
+}
+
 footer {
 	display: flex;
 	justify-content: space-between;
-	margin: 2em auto 1em;
+	margin: 2em auto 2em;
 }
 
 footer a,
 footer a:hover,
 footer a:visited {
 	margin: 0 48px;
-	color: #000;
+	width: 6em;
+	color: #333;
 	text-align: center;
 	text-decoration: none;
+	font-weight: 500;
 }
 
 footer a:hover {
@@ -56,6 +62,7 @@ footer a:hover {
 #license-preview {
 	margin: 2em auto;
 	border: 1px solid #666;
+	border-radius: 2px;
 	padding: 2em 1em;
   overflow-x: auto;
 	background-color: #fff;
@@ -64,6 +71,7 @@ footer a:hover {
 #inputs {
 	margin: 2em auto;
 	border: 1px solid #666;
+	border-radius: 2px;
 	padding: 1em 1.5em 0.5em;
 	background-color: #fff;
 }
