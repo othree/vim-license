@@ -246,7 +246,7 @@ var app = (function () {
       {
         indent: '   ',
         prefix: 'I) ',
-        text: (project, projecturl, name, email) => `
+        text: (project, projecturl, fullname, email) => `
     There are no restrictions on distributing unmodified copies of ${project} except
     that they must include this license text.  You can also distribute
     unmodified parts of ${project}, likewise unrestricted except that they must
@@ -259,7 +259,7 @@ var app = (function () {
       {
         indent: '   ',
         prefix: 'II)',
-        text: (project, projecturl, name, email) => `
+        text: (project, projecturl, fullname, email) => `
     It is allowed to distribute a modified (or extended) version of Vim,
     including executables and/or source code, when the following four
     conditions are met:
@@ -408,21 +408,22 @@ var app = (function () {
       {
         indent: '    ',
         prefix: 'IV) ',
-        text: (project, projecturl, name, email) => `
+        text: (project, projecturl, fullname, email) => `
     It is not allowed to remove this license from the distribution of the ${project}
     sources, parts of it or from a modified version.  You may use this
     license for previous ${project} releases instead of the license that they came
     with, at your option.
     `
       },
+      '',
     ];
 
-    const gen = (project, projecturl, name, email) => TEXT.map(part => {
+    const gen = (project, projecturl, fullname, email) => TEXT.map(part => {
       if (typeof part === 'string') {
         return part;
       }
 
-      const p = part.text(project, projecturl, name, email).trim();
+      const p = part.text(project, projecturl, fullname, email).trim();
       const words = p.split(/\s+/g);
 
       const lines = [part.prefix];
@@ -447,7 +448,7 @@ var app = (function () {
     const file = "src/App.svelte";
 
     function create_fragment(ctx) {
-    	var main, h1, t1, div0, fieldset0, label0, t3, input0, t4, fieldset1, label1, t6, input1, t7, fieldset2, label2, t9, input2, t10, fieldset3, label3, t12, input3, t13, div1, button, t15, textarea, t16, pre, t17, t18, footer, a, dispose;
+    	var main, h1, t1, div0, fieldset0, label0, t3, input0, t4, fieldset1, label1, t6, input1, t7, fieldset2, label2, t9, input2, t10, fieldset3, label3, t12, input3, t13, div1, button, t15, textarea, t16, a0, t17, t18, pre, t19, t20, footer, a1, dispose;
 
     	return {
     		c: function create() {
@@ -486,70 +487,77 @@ var app = (function () {
     			t15 = space();
     			textarea = element("textarea");
     			t16 = space();
-    			pre = element("pre");
-    			t17 = text(ctx.licenseText);
+    			a0 = element("a");
+    			t17 = text("Download");
     			t18 = space();
+    			pre = element("pre");
+    			t19 = text(ctx.licenseText);
+    			t20 = space();
     			footer = element("footer");
-    			a = element("a");
-    			a.textContent = "GitHub";
-    			add_location(h1, file, 90, 0, 1208);
+    			a1 = element("a");
+    			a1.textContent = "GitHub";
+    			add_location(h1, file, 106, 0, 1578);
     			label0.htmlFor = "project";
-    			label0.className = "svelte-17ol6gt";
-    			add_location(label0, file, 94, 2, 1263);
+    			label0.className = "svelte-1efdnra";
+    			add_location(label0, file, 110, 2, 1633);
     			input0.id = "project";
-    			input0.className = "svelte-17ol6gt";
-    			add_location(input0, file, 95, 2, 1307);
-    			fieldset0.className = "svelte-17ol6gt";
-    			add_location(fieldset0, file, 93, 2, 1250);
+    			input0.className = "svelte-1efdnra";
+    			add_location(input0, file, 111, 2, 1677);
+    			fieldset0.className = "svelte-1efdnra";
+    			add_location(fieldset0, file, 109, 2, 1620);
     			label1.htmlFor = "projecturl";
-    			label1.className = "svelte-17ol6gt";
-    			add_location(label1, file, 98, 2, 1380);
+    			label1.className = "svelte-1efdnra";
+    			add_location(label1, file, 114, 2, 1750);
     			input1.id = "projecturl";
-    			input1.className = "svelte-17ol6gt";
-    			add_location(input1, file, 99, 2, 1426);
-    			fieldset1.className = "svelte-17ol6gt";
-    			add_location(fieldset1, file, 97, 2, 1367);
+    			input1.className = "svelte-1efdnra";
+    			add_location(input1, file, 115, 2, 1796);
+    			fieldset1.className = "svelte-1efdnra";
+    			add_location(fieldset1, file, 113, 2, 1737);
     			label2.htmlFor = "maintainer";
-    			label2.className = "svelte-17ol6gt";
-    			add_location(label2, file, 102, 2, 1505);
+    			label2.className = "svelte-1efdnra";
+    			add_location(label2, file, 118, 2, 1875);
     			input2.id = "maintainer";
-    			input2.className = "svelte-17ol6gt";
-    			add_location(input2, file, 103, 2, 1550);
-    			fieldset2.className = "svelte-17ol6gt";
-    			add_location(fieldset2, file, 101, 2, 1492);
+    			input2.className = "svelte-1efdnra";
+    			add_location(input2, file, 119, 2, 1920);
+    			fieldset2.className = "svelte-1efdnra";
+    			add_location(fieldset2, file, 117, 2, 1862);
     			label3.htmlFor = "email";
-    			label3.className = "svelte-17ol6gt";
-    			add_location(label3, file, 106, 2, 1627);
+    			label3.className = "svelte-1efdnra";
+    			add_location(label3, file, 122, 2, 1997);
     			input3.id = "email";
-    			input3.className = "svelte-17ol6gt";
-    			add_location(input3, file, 107, 2, 1673);
-    			fieldset3.className = "svelte-17ol6gt";
-    			add_location(fieldset3, file, 105, 2, 1614);
+    			input3.className = "svelte-1efdnra";
+    			add_location(input3, file, 123, 2, 2043);
+    			fieldset3.className = "svelte-1efdnra";
+    			add_location(fieldset3, file, 121, 2, 1984);
     			div0.id = "inputs";
-    			div0.className = "svelte-17ol6gt";
-    			add_location(div0, file, 92, 0, 1230);
+    			div0.className = "svelte-1efdnra";
+    			add_location(div0, file, 108, 0, 1600);
     			button.id = "copy-license";
-    			button.className = "svelte-17ol6gt";
-    			add_location(button, file, 112, 2, 1756);
+    			button.className = "button svelte-1efdnra";
+    			add_location(button, file, 128, 2, 2126);
     			textarea.id = "license-text";
     			textarea.readOnly = true;
     			textarea.value = ctx.licenseText;
-    			textarea.className = "svelte-17ol6gt";
-    			add_location(textarea, file, 113, 2, 1814);
+    			textarea.className = "svelte-1efdnra";
+    			add_location(textarea, file, 129, 2, 2199);
+    			a0.href = ctx.blobURL;
+    			a0.download = "LICENSE";
+    			a0.className = "button svelte-1efdnra";
+    			add_location(a0, file, 130, 1, 2262);
     			div1.id = "buttons";
-    			div1.className = "svelte-17ol6gt";
-    			add_location(div1, file, 111, 0, 1735);
+    			div1.className = "svelte-1efdnra";
+    			add_location(div1, file, 127, 0, 2105);
     			pre.id = "license-preview";
-    			pre.className = "svelte-17ol6gt";
-    			add_location(pre, file, 116, 0, 1884);
-    			main.className = "svelte-17ol6gt";
-    			add_location(main, file, 88, 0, 1200);
-    			a.href = "https://github.com/othree/vim-license";
-    			a.target = "_blank";
-    			a.className = "svelte-17ol6gt";
-    			add_location(a, file, 121, 1, 1950);
-    			footer.className = "svelte-17ol6gt";
-    			add_location(footer, file, 120, 0, 1940);
+    			pre.className = "svelte-1efdnra";
+    			add_location(pre, file, 133, 0, 2335);
+    			main.className = "svelte-1efdnra";
+    			add_location(main, file, 104, 0, 1570);
+    			a1.href = "https://github.com/othree/vim-license";
+    			a1.target = "_blank";
+    			a1.className = "svelte-1efdnra";
+    			add_location(a1, file, 138, 1, 2401);
+    			footer.className = "svelte-1efdnra";
+    			add_location(footer, file, 137, 0, 2391);
 
     			dispose = [
     				listen(input0, "input", ctx.input0_input_handler),
@@ -605,12 +613,15 @@ var app = (function () {
     			append(div1, button);
     			append(div1, t15);
     			append(div1, textarea);
-    			append(main, t16);
+    			append(div1, t16);
+    			append(div1, a0);
+    			append(a0, t17);
+    			append(main, t18);
     			append(main, pre);
-    			append(pre, t17);
-    			insert(target, t18, anchor);
+    			append(pre, t19);
+    			insert(target, t20, anchor);
     			insert(target, footer, anchor);
-    			append(footer, a);
+    			append(footer, a1);
     		},
 
     		p: function update(changed, ctx) {
@@ -621,7 +632,14 @@ var app = (function () {
 
     			if (changed.licenseText) {
     				textarea.value = ctx.licenseText;
-    				set_data(t17, ctx.licenseText);
+    			}
+
+    			if (changed.blobURL) {
+    				a0.href = ctx.blobURL;
+    			}
+
+    			if (changed.licenseText) {
+    				set_data(t19, ctx.licenseText);
     			}
     		},
 
@@ -631,7 +649,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach(main);
-    				detach(t18);
+    				detach(t20);
     				detach(footer);
     			}
 
@@ -641,7 +659,9 @@ var app = (function () {
     }
 
     function instance($$self, $$props, $$invalidate) {
-    	let project = 'Vim';
+    	const createFileURL = string => window.URL.createObjectURL(new Blob([string], {type: 'text/plain'}));
+
+    let project = 'Vim';
     let projecturl = 'vim.sf.net, www.vim.org and/or comp.editors';
     let fullname = 'Bram Moolenaar <Bram@vim.org>';
     let email = 'maintainer@vim.org';
@@ -671,10 +691,11 @@ var app = (function () {
     		$$invalidate('email', email);
     	}
 
-    	let licenseText;
+    	let licenseText, blobURL;
 
-    	$$self.$$.update = ($$dirty = { project: 1, projecturl: 1, email: 1 }) => {
-    		if ($$dirty.project || $$dirty.projecturl || $$dirty.email) { $$invalidate('licenseText', licenseText = gen(project, projecturl, name, email)); }
+    	$$self.$$.update = ($$dirty = { project: 1, projecturl: 1, fullname: 1, email: 1, licenseText: 1 }) => {
+    		if ($$dirty.project || $$dirty.projecturl || $$dirty.fullname || $$dirty.email) { $$invalidate('licenseText', licenseText = gen(project, projecturl, fullname, email)); }
+    		if ($$dirty.licenseText) { $$invalidate('blobURL', blobURL = createFileURL(licenseText)); }
     	};
 
     	return {
@@ -684,6 +705,7 @@ var app = (function () {
     		email,
     		copy,
     		licenseText,
+    		blobURL,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,

@@ -2,12 +2,15 @@
 
 import license from './license';
 
+const createFileURL = string => window.URL.createObjectURL(new Blob([string], {type: 'text/plain'}));
+
 let project = 'Vim';
 let projecturl = 'vim.sf.net, www.vim.org and/or comp.editors';
 let fullname = 'Bram Moolenaar <Bram@vim.org>';
 let email = 'maintainer@vim.org';
 
-$: licenseText = license(project, projecturl, name, email);
+$: licenseText = license(project, projecturl, fullname, email);
+$: blobURL = createFileURL(licenseText);
 
 const copy = () => {
   document.querySelector("#license-text").select();
@@ -78,10 +81,23 @@ fieldset input {
 	margin: 2em auto 1em;
 }
 
-#buttons button {
+#buttons .button {
+	position: relative;
 	border: 1px solid #666;
 	border-radius: 4px;
 	padding: 6px 24px;
+	color: #000;
+	background: #fff;
+}
+
+#buttons .button:hover {
+	text-decoration: none;
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+#buttons .button:active {
+	top: 2px;
+	left: 1px;
+	box-shadow: none;
 }
 
 </style>
@@ -110,8 +126,9 @@ fieldset input {
 </div>
 
 <div id="buttons">
-  <button id="copy-license" on:click={copy}>Copy</button>
+  <button id="copy-license" on:click={copy} class="button">Copy</button>
   <textarea id="license-text" readonly>{licenseText}</textarea>
+	<a href={blobURL} download="LICENSE" class="button">Download</a>
 </div>
 
 <pre id="license-preview">{licenseText}</pre>

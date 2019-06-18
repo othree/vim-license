@@ -6,7 +6,7 @@ const TEXT = [
   {
     indent: '   ',
     prefix: 'I) ',
-    text: (project, projecturl, name, email) => `
+    text: (project, projecturl, fullname, email) => `
     There are no restrictions on distributing unmodified copies of ${project} except
     that they must include this license text.  You can also distribute
     unmodified parts of ${project}, likewise unrestricted except that they must
@@ -19,7 +19,7 @@ const TEXT = [
   {
     indent: '   ',
     prefix: 'II)',
-    text: (project, projecturl, name, email) => `
+    text: (project, projecturl, fullname, email) => `
     It is allowed to distribute a modified (or extended) version of Vim,
     including executables and/or source code, when the following four
     conditions are met:
@@ -168,21 +168,22 @@ const TEXT = [
   {
     indent: '    ',
     prefix: 'IV) ',
-    text: (project, projecturl, name, email) => `
+    text: (project, projecturl, fullname, email) => `
     It is not allowed to remove this license from the distribution of the ${project}
     sources, parts of it or from a modified version.  You may use this
     license for previous ${project} releases instead of the license that they came
     with, at your option.
     `
   },
+  '',
 ];
 
-const gen = (project, projecturl, name, email) => TEXT.map(part => {
+const gen = (project, projecturl, fullname, email) => TEXT.map(part => {
   if (typeof part === 'string') {
     return part;
   }
 
-  const p = part.text(project, projecturl, name, email).trim();
+  const p = part.text(project, projecturl, fullname, email).trim();
   const words = p.split(/\s+/g);
 
   const lines = [part.prefix];
