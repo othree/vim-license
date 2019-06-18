@@ -47,6 +47,12 @@ var app = (function () {
         node.addEventListener(event, handler, options);
         return () => node.removeEventListener(event, handler, options);
     }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else
+            node.setAttribute(attribute, value);
+    }
     function children(element) {
         return Array.from(element.childNodes);
     }
@@ -293,8 +299,8 @@ var app = (function () {
     will be distributed is negotiable.  If there has been no negotiation
     then this license, or a later version, also applies to your changes.
     The current maintainer is ${fullname}.  If this
-    changes it will be announced in appropriate places (most likely
-    ${projecturl}).  When it is completely
+    changes it will be announced in appropriate places${projecturl ? ' (most likely' : '.'}
+    ${projecturl}${projecturl ? ').' : '' }  When it is completely
     impossible to contact the maintainer, the obligation to send him
     your changes ceases.  Once the maintainer has confirmed that he has
     received your changes they will not have to be sent again.
@@ -466,7 +472,7 @@ var app = (function () {
     			t6 = space();
     			fieldset1 = element("fieldset");
     			label1 = element("label");
-    			label1.textContent = "Project URL";
+    			label1.textContent = "Project URL(optional)";
     			t8 = space();
     			input1 = element("input");
     			t9 = space();
@@ -497,69 +503,73 @@ var app = (function () {
     			footer = element("footer");
     			a1 = element("a");
     			a1.textContent = "GitHub";
-    			add_location(h1, file, 106, 0, 1586);
-    			add_location(p, file, 108, 0, 1608);
+    			add_location(h1, file, 110, 0, 1654);
+    			add_location(p, file, 112, 0, 1676);
     			label0.htmlFor = "project";
-    			label0.className = "svelte-xch834";
-    			add_location(label0, file, 112, 2, 1711);
+    			label0.className = "svelte-3edqxm";
+    			add_location(label0, file, 116, 2, 1779);
     			input0.id = "project";
-    			input0.className = "svelte-xch834";
-    			add_location(input0, file, 113, 2, 1755);
-    			fieldset0.className = "svelte-xch834";
-    			add_location(fieldset0, file, 111, 2, 1698);
+    			input0.required = true;
+    			input0.className = "svelte-3edqxm";
+    			add_location(input0, file, 117, 2, 1823);
+    			fieldset0.className = "svelte-3edqxm";
+    			add_location(fieldset0, file, 115, 2, 1766);
     			label1.htmlFor = "projecturl";
-    			label1.className = "svelte-xch834";
-    			add_location(label1, file, 116, 2, 1828);
+    			label1.className = "svelte-3edqxm";
+    			add_location(label1, file, 120, 2, 1905);
     			input1.id = "projecturl";
-    			input1.className = "svelte-xch834";
-    			add_location(input1, file, 117, 2, 1874);
-    			fieldset1.className = "svelte-xch834";
-    			add_location(fieldset1, file, 115, 2, 1815);
+    			input1.className = "svelte-3edqxm";
+    			add_location(input1, file, 121, 2, 1961);
+    			fieldset1.className = "svelte-3edqxm";
+    			add_location(fieldset1, file, 119, 2, 1892);
     			label2.htmlFor = "maintainer";
-    			label2.className = "svelte-xch834";
-    			add_location(label2, file, 120, 2, 1953);
+    			label2.className = "svelte-3edqxm";
+    			add_location(label2, file, 124, 2, 2040);
     			input2.id = "maintainer";
-    			input2.className = "svelte-xch834";
-    			add_location(input2, file, 121, 2, 1998);
-    			fieldset2.className = "svelte-xch834";
-    			add_location(fieldset2, file, 119, 2, 1940);
+    			input2.required = true;
+    			input2.className = "svelte-3edqxm";
+    			add_location(input2, file, 125, 2, 2085);
+    			fieldset2.className = "svelte-3edqxm";
+    			add_location(fieldset2, file, 123, 2, 2027);
     			label3.htmlFor = "email";
-    			label3.className = "svelte-xch834";
-    			add_location(label3, file, 124, 2, 2075);
+    			label3.className = "svelte-3edqxm";
+    			add_location(label3, file, 128, 2, 2171);
     			input3.id = "email";
-    			input3.className = "svelte-xch834";
-    			add_location(input3, file, 125, 2, 2121);
-    			fieldset3.className = "svelte-xch834";
-    			add_location(fieldset3, file, 123, 2, 2062);
+    			attr(input3, "type", "email");
+    			input3.required = true;
+    			input3.className = "svelte-3edqxm";
+    			add_location(input3, file, 129, 2, 2217);
+    			fieldset3.className = "svelte-3edqxm";
+    			add_location(fieldset3, file, 127, 2, 2158);
     			div0.id = "inputs";
-    			div0.className = "svelte-xch834";
-    			add_location(div0, file, 110, 0, 1678);
+    			div0.className = "svelte-3edqxm";
+    			add_location(div0, file, 114, 0, 1746);
     			button.id = "copy-license";
-    			button.className = "button svelte-xch834";
-    			add_location(button, file, 130, 2, 2204);
+    			button.className = "button svelte-3edqxm";
+    			add_location(button, file, 134, 2, 2322);
     			textarea.id = "license-text";
     			textarea.readOnly = true;
     			textarea.value = ctx.licenseText;
-    			textarea.className = "svelte-xch834";
-    			add_location(textarea, file, 131, 2, 2277);
+    			textarea.className = "svelte-3edqxm";
+    			add_location(textarea, file, 135, 2, 2395);
     			a0.href = ctx.blobURL;
     			a0.download = "LICENSE";
-    			a0.className = "button svelte-xch834";
-    			add_location(a0, file, 132, 1, 2340);
+    			a0.className = "button svelte-3edqxm";
+    			add_location(a0, file, 136, 1, 2458);
     			div1.id = "buttons";
-    			div1.className = "svelte-xch834";
-    			add_location(div1, file, 129, 0, 2183);
+    			div1.className = "svelte-3edqxm";
+    			add_location(div1, file, 133, 0, 2301);
     			pre.id = "license-preview";
-    			pre.className = "svelte-xch834";
-    			add_location(pre, file, 135, 0, 2413);
-    			main.className = "svelte-xch834";
-    			add_location(main, file, 104, 0, 1578);
+    			pre.className = "svelte-3edqxm";
+    			add_location(pre, file, 139, 0, 2531);
+    			main.className = "svelte-3edqxm";
+    			add_location(main, file, 108, 0, 1646);
     			a1.href = "https://github.com/othree/vim-license";
     			a1.target = "_blank";
-    			a1.className = "svelte-xch834";
-    			add_location(a1, file, 140, 1, 2479);
-    			footer.className = "svelte-xch834";
-    			add_location(footer, file, 139, 0, 2469);
+    			a1.className = "svelte-3edqxm";
+    			add_location(a1, file, 144, 1, 2597);
+    			footer.className = "svelte-3edqxm";
+    			add_location(footer, file, 143, 0, 2587);
 
     			dispose = [
     				listen(input0, "input", ctx.input0_input_handler),
@@ -632,7 +642,7 @@ var app = (function () {
     			if (changed.project && (input0.value !== ctx.project)) input0.value = ctx.project;
     			if (changed.projecturl && (input1.value !== ctx.projecturl)) input1.value = ctx.projecturl;
     			if (changed.fullname && (input2.value !== ctx.fullname)) input2.value = ctx.fullname;
-    			if (changed.email && (input3.value !== ctx.email)) input3.value = ctx.email;
+    			if (changed.email) input3.value = ctx.email;
 
     			if (changed.licenseText) {
     				textarea.value = ctx.licenseText;

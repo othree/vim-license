@@ -53,6 +53,7 @@ footer a:hover {
 	margin: 2em auto;
 	border: 1px solid #666;
 	padding: 2em 1em;
+  overflow-x: auto;
 	background-color: #fff;
 }
 
@@ -77,6 +78,10 @@ fieldset input {
 	width: 80%;
 }
 
+fieldset input:invalid {
+  border-color: red;
+}
+
 #buttons {
 	margin: 2em auto 1em;
 }
@@ -89,7 +94,6 @@ fieldset input {
 	color: #000;
 	background: #fff;
 }
-
 #buttons .button:hover {
 	text-decoration: none;
 	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
@@ -111,19 +115,19 @@ fieldset input {
 <div id="inputs">
   <fieldset>
   <label for="project">Project Name</label>
-  <input id="project" bind:value={project} />
+  <input id="project" bind:value={project} required />
   </fieldset>
   <fieldset>
-  <label for="projecturl">Project URL</label>
+  <label for="projecturl">Project URL(optional)</label>
   <input id="projecturl" bind:value={projecturl} />
   </fieldset>
   <fieldset>
   <label for="maintainer">Maintainer</label>
-  <input id="maintainer" bind:value={fullname} />
+  <input id="maintainer" bind:value={fullname} required />
   </fieldset>
   <fieldset>
   <label for="email">Maintainer Email</label>
-  <input id="email" bind:value={email} />
+  <input id="email" type="email" bind:value={email} required />
   </fieldset>
 </div>
 

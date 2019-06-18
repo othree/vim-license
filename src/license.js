@@ -53,8 +53,8 @@ const TEXT = [
     will be distributed is negotiable.  If there has been no negotiation
     then this license, or a later version, also applies to your changes.
     The current maintainer is ${fullname}.  If this
-    changes it will be announced in appropriate places (most likely
-    ${projecturl}).  When it is completely
+    changes it will be announced in appropriate places${projecturl ? ' (most likely' : '.'}
+    ${projecturl}${projecturl ? ').' : '' }  When it is completely
     impossible to contact the maintainer, the obligation to send him
     your changes ceases.  Once the maintainer has confirmed that he has
     received your changes they will not have to be sent again.
