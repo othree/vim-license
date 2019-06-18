@@ -59,7 +59,7 @@ footer a:hover {
 #inputs {
 	margin: 2em auto;
 	border: 1px solid #666;
-	padding: 1em 1em;
+	padding: 1em 1.5em 0.5em;
 	background-color: #fff;
 }
 
@@ -105,6 +105,8 @@ fieldset input {
 <main>
 
 <h1>Vim License</h1>
+
+<p>A web app to help generate Vim License text for your project.</p>
 
 <div id="inputs">
   <fieldset>

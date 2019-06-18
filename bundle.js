@@ -448,7 +448,7 @@ var app = (function () {
     const file = "src/App.svelte";
 
     function create_fragment(ctx) {
-    	var main, h1, t1, div0, fieldset0, label0, t3, input0, t4, fieldset1, label1, t6, input1, t7, fieldset2, label2, t9, input2, t10, fieldset3, label3, t12, input3, t13, div1, button, t15, textarea, t16, a0, t17, t18, pre, t19, t20, footer, a1, dispose;
+    	var main, h1, t1, p, t3, div0, fieldset0, label0, t5, input0, t6, fieldset1, label1, t8, input1, t9, fieldset2, label2, t11, input2, t12, fieldset3, label3, t14, input3, t15, div1, button, t17, textarea, t18, a0, t19, t20, pre, t21, t22, footer, a1, dispose;
 
     	return {
     		c: function create() {
@@ -456,108 +456,112 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "Vim License";
     			t1 = space();
+    			p = element("p");
+    			p.textContent = "A web app to help generate Vim License text for your project.";
+    			t3 = space();
     			div0 = element("div");
     			fieldset0 = element("fieldset");
     			label0 = element("label");
     			label0.textContent = "Project Name";
-    			t3 = space();
+    			t5 = space();
     			input0 = element("input");
-    			t4 = space();
+    			t6 = space();
     			fieldset1 = element("fieldset");
     			label1 = element("label");
     			label1.textContent = "Project URL";
-    			t6 = space();
+    			t8 = space();
     			input1 = element("input");
-    			t7 = space();
+    			t9 = space();
     			fieldset2 = element("fieldset");
     			label2 = element("label");
     			label2.textContent = "Maintainer";
-    			t9 = space();
+    			t11 = space();
     			input2 = element("input");
-    			t10 = space();
+    			t12 = space();
     			fieldset3 = element("fieldset");
     			label3 = element("label");
     			label3.textContent = "Maintainer Email";
-    			t12 = space();
+    			t14 = space();
     			input3 = element("input");
-    			t13 = space();
+    			t15 = space();
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Copy";
-    			t15 = space();
+    			t17 = space();
     			textarea = element("textarea");
-    			t16 = space();
-    			a0 = element("a");
-    			t17 = text("Download");
     			t18 = space();
-    			pre = element("pre");
-    			t19 = text(ctx.licenseText);
+    			a0 = element("a");
+    			t19 = text("Download");
     			t20 = space();
+    			pre = element("pre");
+    			t21 = text(ctx.licenseText);
+    			t22 = space();
     			footer = element("footer");
     			a1 = element("a");
     			a1.textContent = "GitHub";
-    			add_location(h1, file, 106, 0, 1578);
+    			add_location(h1, file, 106, 0, 1586);
+    			add_location(p, file, 108, 0, 1608);
     			label0.htmlFor = "project";
-    			label0.className = "svelte-1efdnra";
-    			add_location(label0, file, 110, 2, 1633);
+    			label0.className = "svelte-xch834";
+    			add_location(label0, file, 112, 2, 1711);
     			input0.id = "project";
-    			input0.className = "svelte-1efdnra";
-    			add_location(input0, file, 111, 2, 1677);
-    			fieldset0.className = "svelte-1efdnra";
-    			add_location(fieldset0, file, 109, 2, 1620);
+    			input0.className = "svelte-xch834";
+    			add_location(input0, file, 113, 2, 1755);
+    			fieldset0.className = "svelte-xch834";
+    			add_location(fieldset0, file, 111, 2, 1698);
     			label1.htmlFor = "projecturl";
-    			label1.className = "svelte-1efdnra";
-    			add_location(label1, file, 114, 2, 1750);
+    			label1.className = "svelte-xch834";
+    			add_location(label1, file, 116, 2, 1828);
     			input1.id = "projecturl";
-    			input1.className = "svelte-1efdnra";
-    			add_location(input1, file, 115, 2, 1796);
-    			fieldset1.className = "svelte-1efdnra";
-    			add_location(fieldset1, file, 113, 2, 1737);
+    			input1.className = "svelte-xch834";
+    			add_location(input1, file, 117, 2, 1874);
+    			fieldset1.className = "svelte-xch834";
+    			add_location(fieldset1, file, 115, 2, 1815);
     			label2.htmlFor = "maintainer";
-    			label2.className = "svelte-1efdnra";
-    			add_location(label2, file, 118, 2, 1875);
+    			label2.className = "svelte-xch834";
+    			add_location(label2, file, 120, 2, 1953);
     			input2.id = "maintainer";
-    			input2.className = "svelte-1efdnra";
-    			add_location(input2, file, 119, 2, 1920);
-    			fieldset2.className = "svelte-1efdnra";
-    			add_location(fieldset2, file, 117, 2, 1862);
+    			input2.className = "svelte-xch834";
+    			add_location(input2, file, 121, 2, 1998);
+    			fieldset2.className = "svelte-xch834";
+    			add_location(fieldset2, file, 119, 2, 1940);
     			label3.htmlFor = "email";
-    			label3.className = "svelte-1efdnra";
-    			add_location(label3, file, 122, 2, 1997);
+    			label3.className = "svelte-xch834";
+    			add_location(label3, file, 124, 2, 2075);
     			input3.id = "email";
-    			input3.className = "svelte-1efdnra";
-    			add_location(input3, file, 123, 2, 2043);
-    			fieldset3.className = "svelte-1efdnra";
-    			add_location(fieldset3, file, 121, 2, 1984);
+    			input3.className = "svelte-xch834";
+    			add_location(input3, file, 125, 2, 2121);
+    			fieldset3.className = "svelte-xch834";
+    			add_location(fieldset3, file, 123, 2, 2062);
     			div0.id = "inputs";
-    			div0.className = "svelte-1efdnra";
-    			add_location(div0, file, 108, 0, 1600);
+    			div0.className = "svelte-xch834";
+    			add_location(div0, file, 110, 0, 1678);
     			button.id = "copy-license";
-    			button.className = "button svelte-1efdnra";
-    			add_location(button, file, 128, 2, 2126);
+    			button.className = "button svelte-xch834";
+    			add_location(button, file, 130, 2, 2204);
     			textarea.id = "license-text";
     			textarea.readOnly = true;
     			textarea.value = ctx.licenseText;
-    			textarea.className = "svelte-1efdnra";
-    			add_location(textarea, file, 129, 2, 2199);
+    			textarea.className = "svelte-xch834";
+    			add_location(textarea, file, 131, 2, 2277);
     			a0.href = ctx.blobURL;
     			a0.download = "LICENSE";
-    			a0.className = "button svelte-1efdnra";
-    			add_location(a0, file, 130, 1, 2262);
+    			a0.className = "button svelte-xch834";
+    			add_location(a0, file, 132, 1, 2340);
     			div1.id = "buttons";
-    			div1.className = "svelte-1efdnra";
-    			add_location(div1, file, 127, 0, 2105);
+    			div1.className = "svelte-xch834";
+    			add_location(div1, file, 129, 0, 2183);
     			pre.id = "license-preview";
-    			pre.className = "svelte-1efdnra";
-    			add_location(pre, file, 133, 0, 2335);
-    			main.className = "svelte-1efdnra";
-    			add_location(main, file, 104, 0, 1570);
+    			pre.className = "svelte-xch834";
+    			add_location(pre, file, 135, 0, 2413);
+    			main.className = "svelte-xch834";
+    			add_location(main, file, 104, 0, 1578);
     			a1.href = "https://github.com/othree/vim-license";
     			a1.target = "_blank";
-    			a1.className = "svelte-1efdnra";
-    			add_location(a1, file, 138, 1, 2401);
-    			footer.className = "svelte-1efdnra";
-    			add_location(footer, file, 137, 0, 2391);
+    			a1.className = "svelte-xch834";
+    			add_location(a1, file, 140, 1, 2479);
+    			footer.className = "svelte-xch834";
+    			add_location(footer, file, 139, 0, 2469);
 
     			dispose = [
     				listen(input0, "input", ctx.input0_input_handler),
@@ -576,50 +580,52 @@ var app = (function () {
     			insert(target, main, anchor);
     			append(main, h1);
     			append(main, t1);
+    			append(main, p);
+    			append(main, t3);
     			append(main, div0);
     			append(div0, fieldset0);
     			append(fieldset0, label0);
-    			append(fieldset0, t3);
+    			append(fieldset0, t5);
     			append(fieldset0, input0);
 
     			input0.value = ctx.project;
 
-    			append(div0, t4);
+    			append(div0, t6);
     			append(div0, fieldset1);
     			append(fieldset1, label1);
-    			append(fieldset1, t6);
+    			append(fieldset1, t8);
     			append(fieldset1, input1);
 
     			input1.value = ctx.projecturl;
 
-    			append(div0, t7);
+    			append(div0, t9);
     			append(div0, fieldset2);
     			append(fieldset2, label2);
-    			append(fieldset2, t9);
+    			append(fieldset2, t11);
     			append(fieldset2, input2);
 
     			input2.value = ctx.fullname;
 
-    			append(div0, t10);
+    			append(div0, t12);
     			append(div0, fieldset3);
     			append(fieldset3, label3);
-    			append(fieldset3, t12);
+    			append(fieldset3, t14);
     			append(fieldset3, input3);
 
     			input3.value = ctx.email;
 
-    			append(main, t13);
+    			append(main, t15);
     			append(main, div1);
     			append(div1, button);
-    			append(div1, t15);
+    			append(div1, t17);
     			append(div1, textarea);
-    			append(div1, t16);
+    			append(div1, t18);
     			append(div1, a0);
-    			append(a0, t17);
-    			append(main, t18);
+    			append(a0, t19);
+    			append(main, t20);
     			append(main, pre);
-    			append(pre, t19);
-    			insert(target, t20, anchor);
+    			append(pre, t21);
+    			insert(target, t22, anchor);
     			insert(target, footer, anchor);
     			append(footer, a1);
     		},
@@ -639,7 +645,7 @@ var app = (function () {
     			}
 
     			if (changed.licenseText) {
-    				set_data(t19, ctx.licenseText);
+    				set_data(t21, ctx.licenseText);
     			}
     		},
 
@@ -649,7 +655,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach(main);
-    				detach(t20);
+    				detach(t22);
     				detach(footer);
     			}
 
