@@ -184,7 +184,7 @@ const gen = (project, projecturl, fullname, email) => TEXT.map(part => {
   }
 
   const p = part.text(project, projecturl, fullname, email).trim();
-  const words = p.split(/\s+/g);
+  const words = p.replace(/\n\s+/g, ' ').split(/\s/g);
 
   const lines = [part.prefix];
   let row = 0;
