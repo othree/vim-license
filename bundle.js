@@ -260,7 +260,7 @@ var app = (function () {
         indent: '   ',
         prefix: 'II)',
         text: (project, projecturl, fullname, email) => `
-    It is allowed to distribute a modified (or extended) version of Vim,
+    It is allowed to distribute a modified (or extended) version of ${project},
     including executables and/or source code, when the following four
     conditions are met:
     `
@@ -366,7 +366,7 @@ var app = (function () {
         prefix: '       e)',
         text: (project, projecturl, fullname, email) => `
     When the GNU General Public License (GPL) applies to the changes,
-    you can distribute the modified Vim under the GNU GPL version 2 or
+    you can distribute the modified ${project} under the GNU GPL version 2 or
     any later version.
     `
       },
