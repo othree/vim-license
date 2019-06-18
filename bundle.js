@@ -438,8 +438,6 @@ var app = (function () {
         }
       });
 
-      console.log(lines);
-
       return lines.join('\n');
     }).join('\n');
 

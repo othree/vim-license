@@ -198,8 +198,6 @@ const gen = (project, projecturl, fullname, email) => TEXT.map(part => {
     }
   });
 
-  console.log(lines);
-
   return lines.join('\n');
 }).join('\n');
 
