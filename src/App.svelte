@@ -28,13 +28,17 @@ main, footer {
 }
 
 footer {
+	display: flex;
+	justify-content: space-between;
 	margin: 2em auto 1em;
 }
 
 footer a,
 footer a:hover,
 footer a:visited {
+	margin: 0 48px;
 	color: #000;
+	text-align: center;
 	text-decoration: none;
 }
 
@@ -142,5 +146,6 @@ fieldset input:invalid {
 </main>
 
 <footer>
+	<a href="https://github.com/othree/vim-license/blob/master/LICENSE" target="_blank">Vim License</a>
 	<a href="https://github.com/othree/vim-license" target="_blank">GitHub</a>
 </footer>
