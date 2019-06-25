@@ -5,11 +5,8 @@ import license from './license';
 const createFileURL = string => window.URL.createObjectURL(new Blob([string], {type: 'text/plain'}));
 
 let project = 'Vim';
-let projecturl = 'vim.sf.net, www.vim.org and/or comp.editors';
-let fullname = 'Bram Moolenaar <Bram@vim.org>';
-let email = 'maintainer@vim.org';
 
-$: licenseText = license(project, projecturl, fullname, email);
+$: licenseText = license(project);
 $: blobURL = createFileURL(licenseText);
 
 const copy = () => {
@@ -128,18 +125,6 @@ fieldset input:invalid {
   <fieldset>
   <label for="project">Project Name</label>
   <input id="project" bind:value={project} required />
-  </fieldset>
-  <fieldset>
-  <label for="projecturl">Project URL(optional)</label>
-  <input id="projecturl" bind:value={projecturl} />
-  </fieldset>
-  <fieldset>
-  <label for="maintainer">Maintainer</label>
-  <input id="maintainer" bind:value={fullname} required />
-  </fieldset>
-  <fieldset>
-  <label for="email">Maintainer Email</label>
-  <input id="email" type="email" bind:value={email} required />
   </fieldset>
 </div>
 
