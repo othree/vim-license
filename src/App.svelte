@@ -4,7 +4,17 @@ import license from './license';
 
 const createFileURL = string => window.URL.createObjectURL(new Blob([string], {type: 'text/plain'}));
 
-let project = 'Vim';
+let project = (function () {
+	const found = document.location.search.split(/[?&]/).map(pair => {
+		return pair.split('=');
+	}).find(entry => {
+		return entry[0] === 'project';
+	});
+
+	if (found) {
+		return decodeURIComponent(found[1]);
+	}
+})() || 'Vim';
 
 $: licenseText = license(project);
 $: blobURL = createFileURL(licenseText);
