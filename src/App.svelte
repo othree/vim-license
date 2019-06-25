@@ -18,6 +18,7 @@ let project = (function () {
 
 $: licenseText = license(project);
 $: blobURL = createFileURL(licenseText);
+$: link = `${document.location.protocol}//${document.location.host}${document.location.pathname}?project=${project}`
 
 const copy = () => {
   document.querySelector("#license-text").select();
@@ -36,6 +37,11 @@ main, footer {
 
 h1 {
 	color: #007f00;
+}
+
+h2 a {
+	color: #333;
+	text-decoration: underline;
 }
 
 footer {
@@ -133,8 +139,9 @@ fieldset input:invalid {
 
 <div id="inputs">
   <fieldset>
-  <label for="project">Project Name</label>
-  <input id="project" bind:value={project} required />
+	  <label for="project">Project Name</label>
+  	<input id="project" bind:value={project} required /><br />
+		Link: <a href="?{project}">{link}</a>
   </fieldset>
 </div>
 
@@ -144,6 +151,7 @@ fieldset input:invalid {
 	<a href={blobURL} download="LICENSE" class="button">Download</a>
 </div>
 
+<h2><a href="{link}#license-preview">Preview</a></h2>
 <pre id="license-preview">{licenseText}</pre>
 
 </main>
