@@ -140,7 +140,7 @@
 
 <main>
 
-  <h1>Vim License</h1>
+  <h1>Vim License Gen</h1>
 
   <p>A web app to help generate Vim License text for your project.</p>
 
